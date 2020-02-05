@@ -113,6 +113,73 @@ Process finished with exit code 0
 ## Task 4
 
 ### Description
+Asked the user for the desired number of double and scanned that value into a variable size. If the input was greater than 128 or less than or equal to 0 then the size was set to 1 and a message was printed explaining the error to the user. The size variable is used to create an array of double with the size that was inputted. The user is asked to input doubles and they are stored in the array of doubles. Once the array is full the array is printed using a for loop and the sum is also calculated. To find the average, the sum is divided by the size that was indicated by the user.
+
+### Sample Runs
+
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/array
+Provide a desired number of doubles? 
+5
+
+Provide the doubles? 
+1.0 2.0
+3.0
+4.0 5.0
+
+Data: 1.0 2.0 3.0 4.0 5.0 
+Average: 3.0
+
+Process finished with exit code 0
+```
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/array
+Provide a desired number of doubles? 
+-12
+Size too small... size is now 1. 
+
+Provide the doubles? 
+1.7
+
+Data: 1.7 
+Average: 1.7
+
+Process finished with exit code 0
+```
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/array
+Provide a desired number of doubles? 
+1738
+Size too large... size is now 128. 
+
+Provide the doubles? 
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+9.0
+1.0
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0 ...
+
+Data: 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 1.0 2.0 
+Average: 4.9
+
+Process finished with exit code 0
+
+```
+
+## Task 5
+
+### Description
 desc
 
 ### Sample Runs
