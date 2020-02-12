@@ -183,3 +183,64 @@ Process finished with exit code 0
 desc
 
 ### Sample Runs
+```
+sample
+
+```
+##Task 6
+
+### Description
+
+Asked the user for a filename and took the contents from data.txt and copied it into their requested file using various file functions.
+
+### Sample Runs
+
+None needed
+
+## Task 7
+
+### Description
+
+Created a new function called swapStrings that takes two strings as parameters and swaps them. The char pointers were created to hold the strings and they were printed before and after the swap demonstrating it.
+
+### Sample Runs
+
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/ptr-arg-2
+string 1 has value "Hello" starting at address 0x100aecf0e
+string 2 has value "Goodbye" starting at address 0x100aecf14
+
+After the swap: string1 = Goodbye and string2 = Hello
+
+Process finished with exit code 0
+
+```
+
+## Task 8
+
+### Description
+
+Created int variables for each number and a char for the operator. Scanned value into variables and used if-else statements to determine which operator was entered. Created multiple functions for each operations and a calc function with a pointer to the specified function. 
+### Sample Runs
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/calc
+3+6
+9 
+10 - 7
+3 
+5*5
+25 
+25 / 5
+5 
+```
+```
+/Users/salvatore.penza568/Desktop/SalPenzaLab1_2/cmake-build-debug/calc
+10 + 7
+17 
+5 * 5
+25 
+3 - 2
+1 
+2/1
+2 
+```

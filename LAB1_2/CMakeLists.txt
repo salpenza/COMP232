@@ -28,4 +28,5 @@ add_executable(strings src/strings.c)
 add_executable(struct src/struct.c)
 add_executable(type-conv src/type-conv.c)
 add_executable(types src/types.c)
-
+add_executable(words src/words.c)
+add_executable(calc src/calc.c)
