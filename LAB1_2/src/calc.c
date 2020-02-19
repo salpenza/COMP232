@@ -1,7 +1,8 @@
-//
-// Created by Penza, Salvatore on 2020-02-12.
-//
-
+/**
+* Name: Sal Penza
+* Lab: Lab 1
+* Date: 2/12/20
+**/
 #include <stdio.h>
 
 int add(int, int);

@@ -1,16 +1,24 @@
-#include <stdio.h>
+/**
+* Name: Sal Penza
+* Lab: Lab 1
+* Date: 2/16/20
+**/
 
-struct birthday {
-    int month;
-    int day;
-    int year;
-};
+#include <stdio.h>
+#include <stdlib.h>
+#include "person.h"
+
 
 int main(void) {
-    struct birthday myBday;    // - no ‘new’ needed !
-                               // then, use dot notation like in Java ! */
-    scanf("%d/%d/%d", &myBday.month, &myBday.day, &myBday.year);
-    printf("I was born on %d/%d/%d\n", myBday.month, myBday.day, myBday.year);
+    int numberOfEmployees = 0;
+    printf("How many employees?\n");
+    scanf("%d", &numberOfEmployees);
+    PERSON *employees[numberOfEmployees];
 
+    for(int i = 0; i < numberOfEmployees; i++){
+        employees[i] = malloc(sizeof(PERSON));
+        addEmployee(employees[i]);
+    }
+    displayAllEmployees(employees, numberOfEmployees);
     return 0;
 }

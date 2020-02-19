@@ -180,12 +180,39 @@ Process finished with exit code 0
 ## Task 5
 
 ### Description
-desc
+Read a word into the buffer and check the length of the word. Make sure that the word is not the sentential word. Allocate enough space for the word uses strlen() and calloc(). Then copy the word from the buffer into the allocated space.
 
 ### Sample Runs
 ```
-sample
+C:\Users\salpe\Desktop\COMP232\SalPenzaLab1_2\cmake-build-debug\words.exe
+Enter words (enter "END" to stop):
+veni vidi
+vici
+END
+The following 3 words have been read:
+veni
+vidi
+vici
 
+Process finished with exit code 0
+
+```
+```
+C:\Users\salpe\Desktop\COMP232\SalPenzaLab1_2\cmake-build-debug\words.exe
+Enter words (enter "END" to stop):
+Hi this is a program that reads words
+END
+The following 8 words have been read:
+Hi
+this
+is
+a
+program
+that
+reads
+words
+
+Process finished with exit code 0
 ```
 ##Task 6
 
@@ -243,4 +270,170 @@ Created int variables for each number and a char for the operator. Scanned value
 1 
 2/1
 2 
+```
+## Task 9
+
+### Description
+
+Made use of a header file to initialize structures and a few functions. Programmed the functions to print and accept input in person.c and used the functions in struct.c to properly gather and print data to user.
+
+### Sample Runs
+```
+C:\Users\salpe\Desktop\COMP232\SalPenzaLab1_2\cmake-build-debug\struct.exe
+How many employees?
+4
+
+Enter information for the next employee.
+Name:Bob Ross
+ Age:54
+ Height:1.2
+ Birthday (MM / DD / YYYY):11/22/3333
+
+Enter information for the next employee.
+Name:Idk someone with a name
+ Age:980
+ Height:18.5
+ Birthday (MM / DD / YYYY):13/37/1337
+
+Enter information for the next employee.
+Name:Arnold Shwa... how2spell
+ Age:72
+ Height:180.3
+ Birthday (MM / DD / YYYY):7/30/1947
+
+Enter information for the next employee.
+Name:yes
+ Age:1
+ Height:1
+ Birthday (MM / DD / YYYY):1/1/1
+
+Displaying Employees...
+
+Bob Ross:
+        Age: 54
+        Height: 1.2
+        Birthday: 11/22/3333
+Idk someone with a name:
+        Age: 980
+        Height: 18.5
+        Birthday: 13/37/1337
+Arnold Shwa... how2spell:
+        Age: 72
+        Height: 180.3
+        Birthday: 7/30/1947
+yes:
+        Age: 1
+        Height: 1.0
+        Birthday: 1/1/1
+
+Process finished with exit code 0
+```
+```
+C:\Users\salpe\Desktop\COMP232\SalPenzaLab1_2\cmake-build-debug\struct.exe
+How many employees?
+0
+
+Displaying Employees...
+
+
+Process finished with exit code 0
+```
+## Task 10
+
+### Description
+
+In processor.c, implemented the function addMessageToCache to reach message types using a switch statement and deal with them accordingly. Using sscanf to read from inputline and an array of integers to keep track of the types being entered while utilizing the provided messageCache array and header file to pull data. If the cache became full it would then go to the messageDispatcher. The messageDispatcher empties the cache and sends the data to be processed in the processMessage function. In processMessage the type and contents are printed and any memory allocated in freed. Finally, printStatistics is called to display the final stats of the run such as the number of batches processed, the total number fo messages, and the number of each type of message processed.
+
+### Sample Runs
+
+```
+C:\Users\salpe\Desktop\COMP232\SalPenza_lab_1_2_processor\cmake-build-debug\processor.exe
+Enter a message, or type "END" to stop >1 I like to eat beans.
+Enter a message, or type "END" to stop >2 1 2 3 4
+Enter a message, or type "END" to stop >3 1.5 2.6 3.7 4.8 5.9
+Enter a message, or type "END" to stop >4 1234567 abcdefg 01123568
+Enter a message, or type "END" to stop >END
+
+Running Message Dispatcher...
+TYPE 1 : I like to eat beans.
+TYPE 2 : 1 2 3 4
+TYPE 3 : 1.5 2.6 3.7 4.8 5.9
+TYPE 4 : 1234567 abcdefg 01123568
+
+Displaying Statistics...
+Number of batches processed: 1
+Messages processed:
+        Total : 4
+        Type 1 : 1
+        Type 2 : 1
+        Type 3 : 1
+        Type 4 : 1
+
+Process finished with exit code 0
+```
+
+```
+C:\Users\salpe\Desktop\COMP232\SalPenza_lab_1_2_processor\cmake-build-debug\processor.exe
+Enter a message, or type "END" to stop >1 I like to eat beans.
+Enter a message, or type "END" to stop >2 1 2 3 4
+Enter a message, or type "END" to stop >3 1.5 2.6 3.7 4.8 5.9
+
+Running Message Dispatcher...
+TYPE 1 : I like to eat beans.
+TYPE 2 : 1 2 3 4
+TYPE 3 : 1.5 2.6 3.7 4.8 5.9
+
+Enter a message, or type "END" to stop >4 1234567 abcdefg 0112358
+Enter a message, or type "END" to stop >END
+
+Running Message Dispatcher...
+TYPE 4 : 1234567 abcdefg 0112358
+
+Displaying Statistics...
+Number of batches processed: 2
+Messages processed:
+        Total : 4
+        Type 1 : 1
+        Type 2 : 1
+        Type 3 : 1
+        Type 4 : 1
+
+Process finished with exit code 0
+```
+```
+C:\Users\salpe\Desktop\COMP232\SalPenza_lab_1_2_processor\cmake-build-debug\processor.exe
+Enter a message, or type "END" to stop >1 I love programming
+Enter a message, or type "END" to stop >1 I hate programming.
+Enter a message, or type "END" to stop >1 I like to eat beans
+
+Running Message Dispatcher...
+TYPE 1 : I love programming
+TYPE 1 : I hate programming.
+TYPE 1 : I like to eat beans
+
+Enter a message, or type "END" to stop >2 1 2 3 4
+Enter a message, or type "END" to stop >3 1.5 2.3 4.6 5.3
+Enter a message, or type "END" to stop >4 1234567 abcdefg qwerty
+
+Running Message Dispatcher...
+TYPE 2 : 1 2 3 4
+TYPE 3 : 1.5 2.3 4.6 5.3 0.0
+TYPE 4 : 1234567 abcdefg qwerty
+
+Enter a message, or type "END" to stop >1 I hate eating beans.
+Enter a message, or type "END" to stop >END
+
+Running Message Dispatcher...
+TYPE 1 : I hate eating beans.
+
+Displaying Statistics...
+Number of batches processed: 3
+Messages processed:
+        Total : 7
+        Type 1 : 4
+        Type 2 : 1
+        Type 3 : 1
+        Type 4 : 1
+
+Process finished with exit code 0
 ```
