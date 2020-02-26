@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/salpe/Desktop/SalPenzaLab3/src/list.c
+list.h
+C:/Users/salpe/Desktop/SalPenzaLab3/src/list.h
+
+C:/Users/salpe/Desktop/SalPenzaLab3/src/list.h
+stdio.h
+-
+stdlib.h
+-
+
